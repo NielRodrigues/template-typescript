@@ -1,0 +1,10 @@
+.mask{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid #2950FF;
+    z-index: 9999;
+}
