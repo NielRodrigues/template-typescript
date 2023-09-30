@@ -10,10 +10,34 @@ body {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: #000000;
+  position: relative;
+}
+
+body:before{
+  content: "";
+  width: 33.333%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #333333;
+  z-index: -1;
+}
+
+body:after{
+  content: "";
+  width: 33.333%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 33.333%;
+  border-right: 1px solid #333333;
+  z-index: -1;
 }
 
 body::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
 }
 
 body::-webkit-scrollbar-track {

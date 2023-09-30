@@ -3,14 +3,14 @@ import MousePosition from '../../utils/MousePosition'
 import { motion } from 'framer-motion';
 import "./style.css"
 
-function CursorMask() {
+function CursorMask({ mask }: {mask?: boolean}) {
 
     const { x, y }: { x: number, y: number} = MousePosition();
-    const size = 32
+    const size = mask ? 64 : 32
 
     return (
         <motion.div 
-            className='mask'
+            className={mask ? "mask-click" : "mask"}
             animate={{
                 WebkitMaskPosition: `${x - size/2}px ${y - size/2}px`,
                 WebkitMaskSize: `${size}px`,

@@ -4,17 +4,18 @@ import logo from "../../assets/images/logo.png"
 import "animate.css"
 import CursorMask from '../../components/CursorMask';
 import Load from '../../components/Load';
+import Header from '../../components/Header';
+import Home from './Home';
 
 export default function Main() {
-  const array = new Array(20).fill(0).map((_, index) => index);
-
-  const [hovered, setHovered] = useState(false)
 
   return (
     <Container>
       <Load />
       <CursorMask />
       
+      <Header />
+      <Home />
     </Container>
   )
 }

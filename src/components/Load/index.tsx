@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Container } from './style'
-import gsap, { Expo, Power2 } from 'gsap'
+import gsap, { Expo, Power1 } from 'gsap'
 
 function Load() {
 
@@ -17,8 +17,8 @@ function Load() {
             {
                 y: 0,
                 delay: 0.5,
-                duration: 0.5,
-                ease: Power2.easeOut,
+                duration: 0.7,
+                ease: Power1.easeOut,
             }
         )
 
@@ -29,8 +29,8 @@ function Load() {
             {
                 y: 0,
                 delay: 0.7,
-                duration: 0.5,
-                ease: Power2.easeOut,
+                duration: 0.6,
+                ease: Power1.easeOut,
             }
         )
 
@@ -42,7 +42,7 @@ function Load() {
                 y: 0,
                 delay: 0.9,
                 duration: 0.5,
-                ease: Power2.easeOut,
+                ease: Power1.easeOut,
             }
         )
 
@@ -61,8 +61,8 @@ function Load() {
                 {
                     y: "-100vh",
                     delay: 0.5,
-                    duration: 0.5,
-                    ease: Power2.easeOut,
+                    duration: 0.7,
+                    ease: Power1.easeOut,
                 }
             )
     
@@ -74,8 +74,8 @@ function Load() {
                 {
                     y: "-100vh",
                     delay: 0.7,
-                    duration: 0.5,
-                    ease: Power2.easeOut,
+                    duration: 0.6,
+                    ease: Power1.easeOut,
                 }
             )
     
@@ -88,7 +88,7 @@ function Load() {
                     y: "-100vh",
                     delay: 0.9,
                     duration: 0.5,
-                    ease: Power2.easeOut,
+                    ease: Power1.easeOut,
                 }
             )
 
