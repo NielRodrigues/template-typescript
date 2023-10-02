@@ -44,8 +44,8 @@ function Load() {
             }, 
             {
                 y: 0,
-                delay: 0.7,
-                duration: 1,
+                delay: 0.8,
+                duration: 0.8,
                 opacity: 1,
                 ease: Power4.easeInOut,
             }
@@ -91,8 +91,8 @@ function Load() {
                 }, 
                 {
                     y: -160,
-                    delay: 0.5,
-                    duration: 1,
+                    delay: 0.7,
+                    duration: 0.8,
                     opacity: 0,
                     ease: Power4.easeInOut,
                 }

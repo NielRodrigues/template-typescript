@@ -29,7 +29,7 @@ function Button1({ text, link }) {
         const span = spanRef.current.getBoundingClientRect();
         
         const x = (clientX - span.x -  (span.width) / 2) / 24
-        const y = clientY * 0.95 - top - 14
+        const y = (clientY - span.y)
 
         gsap.to(arrowRef.current, {x: x})
         gsap.to(arrowRef.current, {y: y})
