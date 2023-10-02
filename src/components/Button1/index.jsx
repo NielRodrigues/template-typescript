@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import PropTypes from "prop-types"
 import { motion } from 'framer-motion'
 import CursorMask from '../CursorMask'
@@ -6,12 +6,14 @@ import gsap from 'gsap'
 
 import "./style.css"
 import { ReactComponent as Arrow } from "../../assets/icons/arrow-right-md.svg"
+import { MouseContext } from '../../contexts/MouseHoverContext'
 
 
 function Button1({ text, link }) {
   const array = new Array(text.length).fill(0).map((_, index) => index);
 
-  const [click, setClick] = useState(false)
+  const { setClick } = useContext(MouseContext)
+
   const [hover, setHover] = useState(false)
 
   const refLink = useRef(null)
@@ -29,7 +31,7 @@ function Button1({ text, link }) {
         const span = spanRef.current.getBoundingClientRect();
         
         const x = (clientX - span.x -  (span.width) / 2) / 24
-        const y = (clientY - span.y)
+        const y = (clientY - span.y - (span.height) / 2) / 2
 
         gsap.to(arrowRef.current, {x: x})
         gsap.to(arrowRef.current, {y: y})
@@ -54,26 +56,23 @@ function Button1({ text, link }) {
     }
   }, [])
   return (
-    <>
-        <CursorMask mask={click} />
-        <motion.a 
-            href={link} className='button'
-            animate={{ y: [120, 0], opacity: [0, 1] }}
-            transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.9 }}
-            onMouseMove={mouseMove}
-            onMouseLeave={mouseLeave}
-            ref={refLink}
-        >
-            <span ref={spanRef}>    
-            {
-                hover ? array.map((letter, index)=> <span className='letter' key={index} style={{animationDelay:  `${index * 50}ms`}}>{text[index] === " " ? " " : text[index]}</span>) : text
-            }
-            </span>
-            <div ref={ballRef} className="icon">
-                <Arrow ref={arrowRef} />
-            </div>
-        </motion.a>
-    </>
+    <motion.a 
+        href={link} className='button'
+        animate={{ y: [120, 0], opacity: [0, 1] }}
+        transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.9 }}
+        onMouseMove={mouseMove}
+        onMouseLeave={mouseLeave}
+        ref={refLink}
+    >
+        <span ref={spanRef} className='content-span'>    
+        {
+            hover ? array.map((letter, index)=> <span className='letter' key={index} style={{animationDelay:  `${index * 50}ms`}}>{text[index] === " " ? " " : text[index]}</span>) : text
+        }
+        </span>
+        <div ref={ballRef} className="icon">
+            <Arrow ref={arrowRef} />
+        </div>
+    </motion.a>
   )
 }
 

@@ -6,6 +6,7 @@ import CursorMask from '../../components/CursorMask';
 import Load from '../../components/Load';
 import Header from '../../components/Header';
 import Home from './Home';
+import Solutions from './Solutions';
 
 export default function Main() {
 
@@ -16,6 +17,7 @@ export default function Main() {
       
       <Header />
       <Home />
+      <Solutions />
     </Container>
   )
 }

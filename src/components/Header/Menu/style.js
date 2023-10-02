@@ -8,10 +8,10 @@ export const Container = styled.div`
 `;
 
 export const MenuBurger = styled.div`
-    height: 20px;
-    width: 28px;
-    max-width: 28px;
-    min-width: 28px;
+    height: 16px;
+    width: 24px;
+    max-width: 24px;
+    min-width: 24px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -25,16 +25,17 @@ export const MenuBurger = styled.div`
 
     div.line{
         width: auto;
-        height: 3px;
+        height: 1px;
+        max-height: 1px;
         display: flex;
         align-items: flex-end;
         gap: 20px;
         margin-right: 0;
 
         div.line-2{
-            width: 28px;
+            width: 24px;
             height: 100%;
-            background-color: ${theme.colors.gray700};
+            background-color: ${theme.colors.white};
         }
 
         
@@ -53,8 +54,8 @@ export const Navigation = styled.div`
     gap: 16px;
     padding: 0px;
     position: absolute;
-    right: 0;
-    top: 88px;
+    right: -2px;
+    top: 40px;
     z-index: 9998;
     transition: all .8s cubic-bezier(.8, 0, 0.1, 1);
     overflow: hidden;

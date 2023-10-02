@@ -26,9 +26,9 @@ function Menu() {
     gsap.to(menuRef.current, {x: x})
     gsap.to(menuRef.current, {y: y})
 
-    gsap.to(line1.current, { marginRight: -48, duration: 0.4,})
-    gsap.to(line2.current, { marginRight: -48, duration: 0.4, delay: 0.2})
-    gsap.to(line3.current, { marginRight: -48, duration: 0.4, delay: 0.4})
+    gsap.to(line1.current, { marginRight: -44, duration: 0.4,})
+    gsap.to(line2.current, { marginRight: -44, duration: 0.4, delay: 0.2})
+    gsap.to(line3.current, { marginRight: -44, duration: 0.4, delay: 0.4})
   }
 
   const mouseLeave = (event) => {

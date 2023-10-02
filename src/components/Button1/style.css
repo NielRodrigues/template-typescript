@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 
-.button span {
+.button span.content-span {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2em;
@@ -31,7 +31,7 @@ span.letter{
     animation: reveal 1000ms ease forwards;
 }
 
-.button span:before{
+.button span.content-span:before{
     content: '';
     height: 1px;
     width: 0%;
@@ -46,7 +46,7 @@ span.letter{
 
 
 
-.button:hover span:before{
+.button:hover span.content-span:before{
     content: '';
     height: 1px;
     width: 100%;
@@ -62,7 +62,7 @@ span.letter{
     100% {
       box-shadow: inset 0px 0px 0px 3px rgb(41, 80, 255, .1), 0px 0px 0px 10px rgb(41, 80, 255, 0);
     }
-  }
+}
   
 
 div.icon{
