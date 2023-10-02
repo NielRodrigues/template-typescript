@@ -7,11 +7,14 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-between;
     width: 95%;
+    position: relative;
 
     svg.logo{
         height: 26px;
+        z-index: 999999;
         path{
             fill: ${theme.colors.white};
         }
+        
     }
 `;

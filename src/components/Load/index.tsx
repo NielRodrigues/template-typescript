@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Container } from './style'
-import gsap, { Expo, Power1 } from 'gsap'
+import gsap, { Expo, Power4 } from 'gsap'
 
 function Load() {
 
@@ -17,8 +17,8 @@ function Load() {
             {
                 y: 0,
                 delay: 0.5,
-                duration: 0.7,
-                ease: Power1.easeOut,
+                duration: 1,
+                ease: Power4.easeInOut,
             }
         )
 
@@ -28,9 +28,9 @@ function Load() {
             }, 
             {
                 y: 0,
-                delay: 0.7,
-                duration: 0.6,
-                ease: Power1.easeOut,
+                delay: 0.6,
+                duration: 1,
+                ease: Power4.easeInOut,
             }
         )
 
@@ -40,9 +40,9 @@ function Load() {
             }, 
             {
                 y: 0,
-                delay: 0.9,
-                duration: 0.5,
-                ease: Power1.easeOut,
+                delay: 0.7,
+                duration: 1,
+                ease: Power4.easeInOut,
             }
         )
 
@@ -61,8 +61,8 @@ function Load() {
                 {
                     y: "-100vh",
                     delay: 0.5,
-                    duration: 0.7,
-                    ease: Power1.easeOut,
+                    duration: 1,
+                    ease: Power4.easeInOut,
                 }
             )
     
@@ -73,9 +73,9 @@ function Load() {
                 }, 
                 {
                     y: "-100vh",
-                    delay: 0.7,
-                    duration: 0.6,
-                    ease: Power1.easeOut,
+                    delay: 0.6,
+                    duration: 1,
+                    ease: Power4.easeInOut,
                 }
             )
     
@@ -86,9 +86,9 @@ function Load() {
                 }, 
                 {
                     y: "-100vh",
-                    delay: 0.9,
-                    duration: 0.5,
-                    ease: Power1.easeOut,
+                    delay: 0.7,
+                    duration: 1,
+                    ease: Power4.easeInOut,
                 }
             )
 
