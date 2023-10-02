@@ -15,6 +15,22 @@
     position: relative;
 }
 
+@keyframes spanHover {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+span.letter{
+    animation: spanHover 1000ms ease forwards;
+}
+
 .button span:before{
     content: '';
     height: 1px;

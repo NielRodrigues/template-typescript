@@ -9,8 +9,10 @@ import { ReactComponent as Arrow } from "../../assets/icons/arrow-right-md.svg"
 
 
 function Button1({ text, link }) {
+  const array = new Array(text.length).fill(0).map((_, index) => index);
 
   const [click, setClick] = useState(false)
+  const [hover, setHover] = useState(false)
 
   const refLink = useRef(null)
   const spanRef = useRef(null)
@@ -19,6 +21,7 @@ function Button1({ text, link }) {
 
   const mouseMove = (event) => {
         setClick(true)
+        setHover(true)
         const { clientX, clientY } = event;
         const { top, left } = arrowRef.current.getBoundingClientRect();
         const ball = ballRef.current.getBoundingClientRect();
@@ -34,6 +37,7 @@ function Button1({ text, link }) {
 
     const mouseLeave = (event) => {
         setClick(false)
+        setHover(false)
         gsap.to(arrowRef.current, {x: 0})
         gsap.to(arrowRef.current, {y: 0})
     }
@@ -60,7 +64,11 @@ function Button1({ text, link }) {
             onMouseLeave={mouseLeave}
             ref={refLink}
         >
-            <span ref={spanRef}>{text}</span>
+            <span ref={spanRef}>    
+            {
+                hover ? array.map((letter, index)=> <span className='letter' key={index} style={{animationDelay:  `${index * 50}ms`}}>{text[index] === " " ? " " : text[index]}</span>) : text
+            }
+            </span>
             <div ref={ballRef} className="icon">
                 <Arrow ref={arrowRef} />
             </div>
