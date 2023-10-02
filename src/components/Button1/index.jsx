@@ -25,18 +25,8 @@ function Button1({ text, link }) {
 
         const span = spanRef.current.getBoundingClientRect();
         
-        const x = (clientX - span.x -  (span.width) / 2) / 12
-        const y = clientY - top - 14
-
-        console.log("clientX", clientX)
-        console.log("span", span.x)
-        
-        console.log("\n\n\nclientY", clientY)
-
-        console.log("top", top)
-        console.log("left", left)
-
-        console.log("\n\n\nball", ball)
+        const x = (clientX - span.x -  (span.width) / 2) / 24
+        const y = clientY * 0.95 - top - 14
 
         gsap.to(arrowRef.current, {x: x})
         gsap.to(arrowRef.current, {y: y})
@@ -65,7 +55,7 @@ function Button1({ text, link }) {
         <motion.a 
             href={link} className='button'
             animate={{ y: [120, 0], opacity: [0, 1] }}
-            transition={{ ease: [.75, 0, .25, 1], duration: 1.3, delay: 2.9 }}
+            transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.9 }}
             onMouseMove={mouseMove}
             onMouseLeave={mouseLeave}
             ref={refLink}

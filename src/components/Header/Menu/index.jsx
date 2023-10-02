@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { Container, ContentHover } from './style'
+import { Container, LinkMenu, MenuBurger, Navigation } from './style'
 
 function Menu() {
 
-  const [hover, setHover] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const menuRef = useRef(null)
-  const contentRef = useRef(null)
+
+  const line1 = useRef(null)
+  const line2 = useRef(null)
+  const line3 = useRef(null)
 
   const mouseEnter = (event) => {
 
     const { clientX, clientY } = event;
     const { top, left } = menuRef.current.getBoundingClientRect()
-    const content = contentRef.current.getBoundingClientRect()
 
 
     const x = clientX - ( left + 32 / 2)
@@ -22,41 +24,69 @@ function Menu() {
     gsap.to(menuRef.current, {x: x})
     gsap.to(menuRef.current, {y: y})
 
-    gsap.to(contentRef.current, {left: -(content.width + 12)})
-    gsap.to(contentRef.current, {top: 32})
-    setHover(true)
+    gsap.to(line1.current, { marginRight: -48, duration: 0.4,})
+    gsap.to(line2.current, { marginRight: -48, duration: 0.4, delay: 0.2})
+    gsap.to(line3.current, { marginRight: -48, duration: 0.4, delay: 0.4})
   }
 
   const mouseLeave = (event) => {
-    setHover(false)
-
-    const content = contentRef.current.getBoundingClientRect()
-    gsap.to(contentRef.current, {left: -(content.width + 12)})
-    gsap.to(contentRef.current, {top: 32 })
-
-    const { clientX, clientY } = event;
 
     gsap.to(menuRef.current, {x: 0})
     gsap.to(menuRef.current, {y: 0})
+
+    gsap.to(line1.current, { marginRight: 0, duration: 0.4,})
+    gsap.to(line2.current, { marginRight: 0, duration: 0.4, delay: 0.2})
+    gsap.to(line3.current, { marginRight: 0, duration: 0.4, delay: 0.4})
 
   }
 
   return (
     <Container 
-      onMouseMove={mouseEnter}
-      onMouseLeave={mouseLeave}
-      ref={menuRef}
+      
     >
-        <div className="line" />
-        <div className="line" />
-        <div className="line" />
-
-        <ContentHover 
-          ref={contentRef}
-          style={hover ? { display: "flex" } : { display: "none" }}
+        <MenuBurger
+          onMouseMove={mouseEnter}
+          onMouseLeave={mouseLeave}
+          ref={menuRef}
+          onClick={() => setOpen(!open)}
         >
-          <span>Menu</span>
-        </ContentHover>
+          <div ref={line1} className="line">
+            <div className="line-2" />
+            <div className="line-2" />
+          </div>
+
+          <div ref={line2} className="line">
+            <div className="line-2" />
+            <div className="line-2" />
+          </div>
+
+          <div ref={line3} className="line">
+            <div className="line-2" />
+            <div className="line-2" />
+          </div>
+        </MenuBurger>
+
+        <Navigation
+          style={open ? {width: "312px", padding: "32px", height: "236px"} : { height: "0px", width: "0px", padding: "0px" }}
+        >
+            <span>Menu</span>
+
+            <LinkMenu to="/">
+              <span>Lorem</span>
+            </LinkMenu>
+
+            <LinkMenu to="/">
+              <span>Lorem</span>
+            </LinkMenu>
+
+            <LinkMenu to="/">
+              <span>Lorem</span>
+            </LinkMenu>
+
+            <LinkMenu to="/">
+              <span>Lorem</span>
+            </LinkMenu>
+        </Navigation>
     </Container>
   )
 }

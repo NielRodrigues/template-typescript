@@ -12,19 +12,19 @@ function Home() {
             <div className="slogan">
                 <motion.h1
                     animate={{ y: [120, 0], opacity: [0, 1] }}
-                    transition={{ ease: [.75, 0, .25, 1], duration: 1.2, delay: 2.6 }}
+                    transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.8 }}
                 >
                     O Maior centro
                 </motion.h1>
                 <motion.h1
                     animate={{ y: [120, 0], opacity: [0, 1] }}
-                    transition={{ ease: [.75, 0, .25, 1], duration: 1.2, delay: 2.7 }}
+                    transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.7 }}
                 >
                     de desenvolvimento
                 </motion.h1>
                 <motion.h1
                     animate={{ y: [120, 0], opacity: [0, 1] }}
-                    transition={{ ease: [.75, 0, .25, 1], duration: 1.2, delay: 2.8 }}
+                    transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.6 }}
                 >
                     Empresarial do Brasil.
                 </motion.h1>
@@ -33,7 +33,7 @@ function Home() {
             <div className="text-and-button">
                 <motion.h2
                         animate={{ y: [120, 0], opacity: [0, 1] }}
-                        transition={{ ease: [.75, 0, .25, 1], duration: 1.2, delay: 3 }}
+                        transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 3 }}
                     >
                     Somos um guia que resolve o todo. Sabemos cada passo que você precisar dar, pois existe uma trilha a ser seguida. Independente do seu tamanho, os problemas são os mesmos, só mudam de escala.
                 </motion.h2>
@@ -44,7 +44,7 @@ function Home() {
         <BGTop>
             <motion.img src={imageTop} alt="BackgrounD Top" 
                 animate={{ y: [120, 0], opacity: [0, 1] }}
-                transition={{ ease: [.75, 0, .25, 1], duration: 1.5, delay: 2.8 }}
+                transition={{ ease: [.75, 0, .25, 1], duration: 0.8, delay: 2.8 }}
             />
         </BGTop>
     </Container>

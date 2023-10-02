@@ -11,7 +11,6 @@ export const Container = styled.header`
 
     svg.logo{
         height: 26px;
-        z-index: 999999;
         path{
             fill: ${theme.colors.white};
         }
