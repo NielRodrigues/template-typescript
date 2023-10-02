@@ -15,7 +15,7 @@
     position: relative;
 }
 
-@keyframes spanHover {
+@keyframes reveal {
     from {
       opacity: 0;
       transform: translateX(20px);
@@ -28,7 +28,7 @@
   }
 
 span.letter{
-    animation: spanHover 1000ms ease forwards;
+    animation: reveal 1000ms ease forwards;
 }
 
 .button span:before{
@@ -55,6 +55,16 @@ span.letter{
     position: absolute;
 }
 
+@keyframes borderPulse {
+    0% {
+      box-shadow: inset 0px 0px 0px 5px rgb(41, 80, 255, .1), 0px 0px 0px 0px rgb(41, 80, 255, 0.8);
+    }
+    100% {
+      box-shadow: inset 0px 0px 0px 3px rgb(41, 80, 255, .1), 0px 0px 0px 10px rgb(41, 80, 255, 0);
+    }
+  }
+  
+
 div.icon{
     width: 40px;
     min-width: 40px;
@@ -64,6 +74,8 @@ div.icon{
     align-items: center;
     justify-content: center;
     background-color: #2950ff;
+
+    animation: borderPulse 1500ms infinite ease-out;
 }
 
 div.icon svg {
