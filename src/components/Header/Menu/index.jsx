@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { Container, LinkMenu, MenuBurger, Navigation } from './style'
 
+import { ReactComponent as CrossIcon } from '../../../assets/icons/cross.svg'
+
 function Menu() {
 
   const [open, setOpen] = useState(false)
@@ -69,7 +71,10 @@ function Menu() {
         <Navigation
           style={open ? {width: "312px", padding: "32px", height: "236px"} : { height: "0px", width: "0px", padding: "0px" }}
         >
-            <span>Menu</span>
+            <div className='line-header-menu'>
+              <span>Menu</span>
+              <CrossIcon onClick={() => setOpen(false)} />
+            </div>
 
             <LinkMenu to="/">
               <span>Lorem</span>

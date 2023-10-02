@@ -59,11 +59,33 @@ export const Navigation = styled.div`
     transition: all .8s cubic-bezier(.8, 0, 0.1, 1);
     overflow: hidden;
 
-    span{
-        font-size: 14px;
-        font-weight: 300;
-        color: #BCBCBC;
-        margin-bottom: 8px;
+    div.line-header-menu{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        transition: all .4s cubic-bezier(.75, 0, 0.25, 1);
+
+        span{
+            font-size: 14px;
+            font-weight: 300;
+            color: #BCBCBC;
+            margin-bottom: 8px;
+        }
+
+        svg{
+            width: 28px;
+            height: 28px;
+            transition: all .8s cubic-bezier(.75, 0, 0.25, 1);
+            cursor: pointer;
+
+            path{
+                stroke: #BCBCBC;
+            }
+
+            &:hover{
+                transform: rotate(90deg);
+            }
+        }
     }
 `;
 

@@ -22,7 +22,7 @@
     transition: all .4s cubic-bezier(0.75, 0, 0.25, 1);
     background-color: #2950ff;
     position: absolute;
-    bottom: -4px;
+    bottom: -8px;
     left: 0;
 }
 
@@ -37,8 +37,6 @@
     transition: all .4s cubic-bezier(0.75, 0, 0.25, 1);
     background-color: #2950ff;
     position: absolute;
-    bottom: -4px;
-    left: 0;
 }
 
 div.icon{
