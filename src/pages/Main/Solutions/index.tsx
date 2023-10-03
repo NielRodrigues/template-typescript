@@ -66,25 +66,26 @@ function Solutions() {
         }
     })
 
-    gsap.to(scroller.current, {
-        ease: "linear",
-        x: "-100%",
-        duration: 0.4,
-        scrollTrigger: {
-            trigger: scroller.current,
-            start: "top 20%",
-            end: "1000 20%",
-            scrub: 4,
-        }
-    })
+    // gsap.to(scroller.current, {
+    //     ease: "linear",
+    //     x: "-100%",
+    //     duration: 0.4,
+    //     scrollTrigger: {
+    //         trigger: scroller.current,
+    //         start: "top 20%",
+    //         end: "1000 20%",
+    //         scrub: 4,
+    //     }
+    // })
 
     const pin = gsap.context(() => {
         gsap.to(section.current, {
-            ease: Power4.easeInOut,
+            ease: "ease",
+            x: "-100%",
             scrollTrigger: {
                 trigger: section.current,
                 start: "top 20%",
-                end: "1000 20%",
+                end: "2000 20%",
                 scrub: 4,
                 pin: true,
             }

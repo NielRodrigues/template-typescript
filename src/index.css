@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: Robert;
+  src: url("./assets/fonts/Roobert-Regular.ttf");
+}
 
 html{
   scroll-behavior: smooth;
@@ -7,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Robert';
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: #000000;
@@ -48,4 +52,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #0F0A0B;
 }
 
-input, select, textarea, option, button { font-family: 'Inter', sans-serif; }
+input, select, textarea, option, button { font-family: 'Robert'; }
+
+h1, h2, h3, h4, h5, h6, p, span div { font-family: 'Robert'; }

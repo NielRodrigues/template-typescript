@@ -59,7 +59,7 @@ function Button1({ text, link }) {
     <motion.a 
         href={link} className='button'
         animate={{ y: [120, 0], opacity: [0, 1] }}
-        transition={{ ease: [.75, 0, .25, 1], duration: 0.7, delay: 2.9 }}
+        transition={{ ease: [0.06, 0.9, 0.26, 0.99], duration: 1.5, delay: 4 }}
         onMouseMove={mouseMove}
         onMouseLeave={mouseLeave}
         ref={refLink}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container } from './style'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -14,8 +14,10 @@ function InfiniteText() {
   let xPercent = 0
   let direction  = -1
   let velocity = 0.05
+  let lastScrollTop = 0
 
   gsap.registerPlugin(ScrollTrigger)
+
 
   useEffect(() => {
     const switchVelocity = () => {
@@ -23,6 +25,14 @@ function InfiniteText() {
       setTimeout(() => {
         velocity = 0.05
       }, 200)
+
+      if(window.scrollY >= lastScrollTop) {
+        direction = -1
+      } else {
+        direction = 1
+      }
+
+      lastScrollTop = window.scrollY
     }
 
     window.addEventListener("scroll", switchVelocity)

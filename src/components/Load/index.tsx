@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container } from './style'
 import gsap, { Expo, Power4 } from 'gsap'
 
@@ -6,11 +6,29 @@ import { ReactComponent as Logo } from '../../assets/images/logo.svg'
 
 function Load() {
 
+    const [saudation, setSaudation] = useState<string[]>(["Maravilhoso", "Dia"])
+    const date = new Date()
+
+    useEffect(() => {
+        const hours = date.getHours()
+
+        if(hours >= 6 && hours < 12) {
+            setSaudation(["Maravilhoso", "Dia"])
+        } else if(hours >= 12 && hours < 19) {
+            setSaudation(["Maravilhosa", "Tarde"])
+        } else {
+            setSaudation(["Maravilhosa", "Noite"])
+        }
+    }, [])
+
     const container = useRef(null)
     const bar1 = useRef(null)
     const bar2 = useRef(null)
     const bar3 = useRef(null)
     const logo = useRef(null)
+
+    const span1 = useRef(null)
+    const span2 = useRef(null)
 
     useEffect(() => {
         gsap.fromTo(bar1.current, 
@@ -37,15 +55,28 @@ function Load() {
             }
         )
 
-        gsap.fromTo(logo.current, 
+        gsap.fromTo(span1.current, 
             {
-                y: 160,
+                x: 80,
                 opacity: 0,
             }, 
             {
-                y: 0,
+                x: 0,
                 delay: 0.8,
-                duration: 0.8,
+                duration: 1.2,
+                opacity: 1,
+                ease: Power4.easeInOut,
+            }
+        )
+        gsap.fromTo(span2.current, 
+            {
+                x: 80,
+                opacity: 0,
+            }, 
+            {
+                x: 0,
+                delay: 1,
+                duration: 1.2,
                 opacity: 1,
                 ease: Power4.easeInOut,
             }
@@ -83,16 +114,29 @@ function Load() {
                 }
             )
     
-            gsap.fromTo(logo.current, 
+            gsap.fromTo(span1.current, 
                 {
-                    y: 0,
+                    x: 0,
                     opacity: 1,
-        
                 }, 
                 {
-                    y: -160,
-                    delay: 0.7,
-                    duration: 0.8,
+                    x: -80,
+                    delay: 0.1,
+                    duration: 1.2,
+                    opacity: 0,
+                    ease: Power4.easeInOut,
+                }
+            )
+            
+            gsap.fromTo(span2.current, 
+                {
+                    x: 0,
+                    opacity: 1,
+                }, 
+                {
+                    x: -80,
+                    delay: 0.3,
+                    duration: 1.2,
                     opacity: 0,
                     ease: Power4.easeInOut,
                 }
@@ -136,8 +180,10 @@ function Load() {
     return (
         <Container ref={container}>
             <div ref={bar1} className="bar" />
-            <div ref={bar2} className="bar" />
-            <Logo className='logo' ref={logo} />
+            <div ref={bar2} className="bar">
+                <span ref={span1}>{saudation[0]}</span> 
+                <span ref={span2}>{saudation[1]}</span>
+            </div>
             <div ref={bar3} className="bar" />
         </Container>
     )

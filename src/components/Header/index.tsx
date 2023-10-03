@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Container } from './style'
 import { ReactComponent as Logo } from '../../assets/images/logo.svg'
-import gsap, { Power4 } from 'gsap'
+import gsap, { Expo } from 'gsap'
 import Menu from './Menu'
 
 function Header() {
@@ -16,8 +16,8 @@ function Header() {
             delay: 2.9,
             opacity: 1,
             y: 0,
-            duration: 0.7,
-            ease: Power4.easeInOut,
+            duration: 1.2,
+            ease: Expo.easeOut,
         })
     }, [])
 

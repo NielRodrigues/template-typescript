@@ -12,6 +12,7 @@ export const Container = styled.section`
     gap: 48px;
     justify-content: space-between;
     margin-bottom: 80px;
+    position: relative;
 `;
 
 export const Content = styled.div`
@@ -26,14 +27,27 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         gap: 4px;
+        max-width: 40%;
 
-        h1{
+        span{
             font-size: 56px;
             font-weight: 300;
             line-height: 1.2em;
             color: ${theme.colors.text};
             margin: 0;
             display: inline-block;
+            margin-right: 10px;
+        }
+
+        h1{
+            font-size: 56px;
+            font-weight: 300;
+            line-height: 1.2em;
+            height: fit-content;
+            color: ${theme.colors.text};
+            margin: 0;
+            display: inline-block;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
     }
 
@@ -116,4 +130,25 @@ export const BGTop = styled.div`
         width: 100%;
         height: auto;
     }
+`;
+
+export const ScrollIndicator = styled.div`
+  width: 2px;
+  border-radius: 2px;
+  height: 192px;
+  background-color: ${theme.colors.gray700};
+  position: absolute;
+  bottom: 128px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  div.active{
+    background-color: ${theme.colors.primary};
+    width: 100%;
+    height: 0%;
+    transition: all 0.5s linear;
+  }
 `;

@@ -19,6 +19,15 @@ export const Container = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
+
+        span{
+            font-size: 24px;
+            color: ${theme.colors.white};
+            font-weight: 400;
+            text-align: center;
+            margin-right: 8px;
+
+        }
     }
     svg.logo{
         position: fixed;
