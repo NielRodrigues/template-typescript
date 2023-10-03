@@ -28,7 +28,7 @@
 }
 .mask-click:before{
     content: "Clique";
-    font-size: 12px;
+    font-size: 14px;
     color: #000000;
     font-weight: 300;
 }

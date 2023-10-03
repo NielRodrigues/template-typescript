@@ -20,12 +20,16 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
     }
-    svg{
+    svg.logo{
         position: fixed;
         z-index: 9999999;
         height: 48px;
         width: 168px;
         top: calc(50vh - 24px);
         left: calc(50vw - 84px);
+
+        path{
+            fill: ${theme.colors.white}
+        }
     }
 `;

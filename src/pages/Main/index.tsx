@@ -7,6 +7,7 @@ import Load from '../../components/Load';
 import Header from '../../components/Header';
 import Home from './Home';
 import Solutions from './Solutions';
+import InfiniteText from '../../components/InfiniteText';
 
 export default function Main() {
 
@@ -18,6 +19,7 @@ export default function Main() {
       <Header />
       <Home />
       <Solutions />
+      <InfiniteText />
     </Container>
   )
 }

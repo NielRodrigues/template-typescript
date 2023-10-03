@@ -137,7 +137,7 @@ function Load() {
         <Container ref={container}>
             <div ref={bar1} className="bar" />
             <div ref={bar2} className="bar" />
-            <Logo ref={logo} />
+            <Logo className='logo' ref={logo} />
             <div ref={bar3} className="bar" />
         </Container>
     )

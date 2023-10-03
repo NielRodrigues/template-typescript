@@ -28,7 +28,7 @@
   }
 
 span.letter{
-    animation: reveal 1000ms ease forwards;
+    animation: reveal 500ms ease forwards;
 }
 
 .button span.content-span:before{

@@ -1,13 +1,17 @@
 import React, { useRef, useEffect } from 'react'
-import { Container, Div2, Title } from './style'
+import { Container, Div2, Panel, Scroll, Title } from './style'
 import gsap, { Power4 } from 'gsap'
 import { ScrollTrigger } from "gsap/all";
 import Button2 from '../../../components/Button2';
+import Card from '../../../components/Card';
 
 function Solutions() {
 
   const titleRef = useRef(null)
   const divRef = useRef(null)
+  const section = useRef(null)
+  const sectionScroller = useRef(null)
+  const scroller = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
@@ -41,22 +45,76 @@ function Solutions() {
             start: "top 80%",
             end: "top 80%",
             scrub: 4,
-            // markers: true,
+            pin: true,
         }
     })
+
+    gsap.fromTo(sectionScroller.current, {
+        y: 40,
+        opacity: 0,
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power4.easeInOut,
+        duration: 0.4,
+        scrollTrigger: {
+            trigger: sectionScroller.current,
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 4,
+            pin: true,
+        }
+    })
+
+    gsap.to(scroller.current, {
+        ease: "linear",
+        x: "-100%",
+        duration: 0.4,
+        scrollTrigger: {
+            trigger: scroller.current,
+            start: "top 20%",
+            end: "1000 20%",
+            scrub: 4,
+        }
+    })
+
+    const pin = gsap.context(() => {
+        gsap.to(section.current, {
+            ease: Power4.easeInOut,
+            scrollTrigger: {
+                trigger: section.current,
+                start: "top 20%",
+                end: "1000 20%",
+                scrub: 4,
+                pin: true,
+            }
+        })
+    })
+
+    return () => {
+        pin.revert()
+    }
   }, [])
 
   return (
-    <Container>
+    <Container ref={section}>
         <Title ref={titleRef}>Nossas<br />soluções</Title>
-        <Div2 ref={divRef} style={{position: "unset"}}>
+        <Div2 ref={divRef}>
             <h1>Pré, <br />durante <br />& pós.</h1>
             <h2>Os Superprodutos é a nossa forma de entregar a solução você antes ou em qualquer momento da Trilha Empresarial.</h2>
 
             <Button2 link='/' text='Conheça a nossa trilha empresarial' />
         </Div2>
 
-        <Div2></Div2>
+        <Scroll ref={sectionScroller}>
+            <Panel ref={scroller}>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </Panel>
+        </Scroll>
     </Container>
   )
 }
