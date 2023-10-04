@@ -32,16 +32,16 @@ function Solutions() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 0.4,
-            duration: 50,
+            delay: 3,
+            duration: 3,
             stagger: {
-                amount: 2,
+                amount: 0.5,
             },
             scrollTrigger: {
                 trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 8,
+                scrub: 1,
             }
         })
 

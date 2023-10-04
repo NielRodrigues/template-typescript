@@ -13,12 +13,15 @@ function Home() {
   const sloganRef2 = useRef(null)
   const sloganRef3 = useRef(null)
 
+  const phrase = useRef(null)
+
 
   useEffect(() => {
-    if(sloganRef.current && sloganRef2.current && sloganRef3.current) {
+    if(sloganRef.current && sloganRef2.current && sloganRef3.current && phrase.current) {
         SplitType.create(sloganRef.current, { types: "words, chars" })
         SplitType.create(sloganRef2.current, { types: "words, chars" })
         SplitType.create(sloganRef3.current, { types: "words, chars" })
+        SplitType.create(phrase.current, { types: "words", wordClass: "words-top" })
 
         gsap.fromTo(".char", {
             y: 64,
@@ -28,6 +31,20 @@ function Home() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 3,
+            duration: 3,
+            stagger: {
+                amount: 0.5,
+            }
+        })
+
+        gsap.fromTo(".words-top", {
+            y: 64,
+            opacity: 0,
+        }, {
+            y: 0,
+            opacity: 1,
+            ease: Expo.easeOut,
+            delay: 3.7,
             duration: 3,
             stagger: {
                 amount: 0.5,
@@ -48,12 +65,9 @@ function Home() {
             </div>
 
             <div className="text-and-button">
-                <motion.h2
-                        animate={{ y: [120, 0], opacity: [0, 1] }}
-                        transition={{ ease: [0.06, 0.9, 0.26, 0.99], duration: 1.5, delay: 3.7 }}
-                    >
+                <h2 ref={phrase}>
                     Somos um guia que resolve o todo. Sabemos cada passo que você precisar dar, pois existe uma trilha a ser seguida. Independente do seu tamanho, os problemas são os mesmos, só mudam de escala.
-                </motion.h2>
+                </h2>
 
                 <Button1 link='/' text='Conheça a nossa trilha empresarial' />
             </div>
