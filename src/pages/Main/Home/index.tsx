@@ -28,7 +28,7 @@ function Home() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 3,
-            duration: 3,
+            duration: 1,
             stagger: {
                 amount: 2,
             }
