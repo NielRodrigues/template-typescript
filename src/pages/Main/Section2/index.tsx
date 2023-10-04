@@ -46,7 +46,7 @@ function Section2() {
                 start: "top 80%",
                 end: "top 80%",
                 scrub: false,
-                toggleActions: "restart none none none"
+                toggleActions: "restart none none reverse"
             }
         })
 
@@ -67,7 +67,7 @@ function Section2() {
                 start: "top 80%",
                 end: "top 80%",
                 scrub: false,
-                toggleActions: "restart none none none"
+                toggleActions: "restart none none reverse"
             }
         })
 
@@ -88,7 +88,7 @@ function Section2() {
                 start: "top 80%",
                 end: "top 80%",
                 scrub: false,
-                toggleActions: "restart none none none"
+                toggleActions: "restart none none reverse"
             }
         })
     }
@@ -110,7 +110,7 @@ function Section2() {
             start: "top 75%",
             end: "top 75%",
             scrub: false,
-            toggleActions: "restart none none none"
+            toggleActions: "restart none none reverse"
         }
     })
 
