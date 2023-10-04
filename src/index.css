@@ -4,6 +4,16 @@
   src: url("./assets/fonts/Roobert-Regular.ttf");
 }
 
+@font-face {
+  font-family: TobiasLight;
+  src: url("./assets/fonts/Tobias-Light.ttf");
+}
+
+@font-face {
+  font-family: Tobias;
+  src: url("./assets/fonts/Tobias-Regular.ttf");
+}
+
 html{
   scroll-behavior: smooth;
 }

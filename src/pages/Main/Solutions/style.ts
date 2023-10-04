@@ -2,16 +2,27 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
 export const Container = styled.section`
-    width: 95%;
-    height: 2417px;
+    width: auto;
+    min-width: fit-content;
+    height: 200vh;
+    min-height: 2000px;
     display: flex;
-    justify-content: space-between;
     margin: 80px 0;
+    border-radius: 24px;
+`;
+
+export const Content = styled.div`
+    width: auto;
+    min-width: fit-content;
+    height: auto;
+    max-height: 417px;
+    display: flex;
 `;
 
 export const Title = styled.h3`
-    width: 33%;
-    min-width: 33%;
+    width: calc(33.33vw - 48px);
+    min-width: calc(33.33vw - 48px);
+    padding-left: 48px;
     font-size: 20px;
     color: ${theme.colors.text};
     font-weight: 400;
@@ -20,12 +31,12 @@ export const Title = styled.h3`
 `;
 
 export const Div2 = styled.div`
-    width: 33%;
-    min-width: 33%;
+    width: calc(33.33vw - 48px);
+    min-width: calc(33.33vw - 48px);
+    padding-right: 48px;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-right: 32px;
 
     h1{
         font-size: 56px;
@@ -42,16 +53,16 @@ export const Div2 = styled.div`
         line-height: 1.4em;
         margin: 0;
         margin-bottom: 20px;
+        font-family: "Tobias";
     }
 `;
 
 export const Scroll = styled.div`
-    width: 33%;
+    width: auto;
     height: 417px;
 `;
 
 export const Panel = styled.div`
-    width: fit-content;
     height: 100%;
     display: flex;
     align-items: center;

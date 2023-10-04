@@ -6,18 +6,18 @@ import { ReactComponent as Logo } from '../../assets/images/logo.svg'
 
 function Load() {
 
-    const [saudation, setSaudation] = useState<string[]>(["Maravilhoso", "Dia"])
+    const [saudation, setSaudation] = useState<string[]>(["Maravilhoso", "dia"])
     const date = new Date()
 
     useEffect(() => {
         const hours = date.getHours()
 
         if(hours >= 6 && hours < 12) {
-            setSaudation(["Maravilhoso", "Dia"])
+            setSaudation(["Maravilhoso", "dia"])
         } else if(hours >= 12 && hours < 19) {
-            setSaudation(["Maravilhosa", "Tarde"])
+            setSaudation(["Maravilhosa", "tarde"])
         } else {
-            setSaudation(["Maravilhosa", "Noite"])
+            setSaudation(["Maravilhosa", "noite"])
         }
     }, [])
 

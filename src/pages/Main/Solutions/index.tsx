@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { Container, Div2, Panel, Scroll, Title } from './style'
+import { Container, Content, Div2, Panel, Scroll, Title } from './style'
 import gsap, { Power4 } from 'gsap'
 import { ScrollTrigger } from "gsap/all";
 import Button2 from '../../../components/Button2';
@@ -81,11 +81,11 @@ function Solutions() {
     const pin = gsap.context(() => {
         gsap.to(section.current, {
             ease: "ease",
-            x: "-100%",
+            x: "-50%",
             scrollTrigger: {
                 trigger: section.current,
                 start: "top 20%",
-                end: "2000 20%",
+                end: `1583 20%`,
                 scrub: 4,
                 pin: true,
             }
@@ -98,24 +98,26 @@ function Solutions() {
   }, [])
 
   return (
-    <Container ref={section}>
-        <Title ref={titleRef}>Nossas<br />soluções</Title>
-        <Div2 ref={divRef}>
-            <h1>Pré, <br />durante <br />& pós.</h1>
-            <h2>Os Superprodutos é a nossa forma de entregar a solução você antes ou em qualquer momento da Trilha Empresarial.</h2>
+    <Container>
+        <Content ref={section}>
+            <Title ref={titleRef}>Nossas<br />soluções</Title>
+            <Div2 ref={divRef}>
+                <h1>Pré, <br />durante <br />& pós.</h1>
+                <h2>Os Superprodutos é a nossa forma de entregar a solução você antes ou em qualquer momento da Trilha Empresarial.</h2>
 
-            <Button2 link='/' text='Conheça a nossa trilha empresarial' />
-        </Div2>
+                <Button2 link='/' text='Conheça a nossa trilha empresarial' />
+            </Div2>
 
-        <Scroll ref={sectionScroller}>
-            <Panel ref={scroller}>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </Panel>
-        </Scroll>
+            <Scroll ref={sectionScroller}>
+                <Panel ref={scroller}>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                </Panel>
+            </Scroll>
+        </Content>
     </Container>
   )
 }

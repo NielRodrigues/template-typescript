@@ -13,22 +13,8 @@ function Home() {
   const sloganRef2 = useRef(null)
   const sloganRef3 = useRef(null)
 
-  const [textA, setTextA] = useState<string[]>([])
   const [percetage, setPercetage] = useState<number>(0)
 
-  const variants = {
-    visible: (i: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: i * 0.1,
-            ease: [.75, 0, .25, 1],
-            type: "tween",
-            duration: 1.2,
-        },
-    }),
-    hidden: { opacity: 0, y: 40},
-  }
 
   useEffect(() => {
     if(sloganRef.current && sloganRef2.current && sloganRef3.current) {

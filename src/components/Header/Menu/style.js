@@ -54,7 +54,7 @@ export const Navigation = styled.div`
     gap: 16px;
     padding: 0px;
     position: absolute;
-    right: -2px;
+    right: 48px;
     top: 40px;
     z-index: 9998;
     transition: all .8s cubic-bezier(.8, 0, 0.1, 1);

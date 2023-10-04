@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
 export const Container = styled.header`
-    height: 112px;
+    height: auto;
+    width: calc(100vw - 96px);
+    padding: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
     position: relative;
 
     svg.logo{

@@ -1,6 +1,27 @@
-import styled from "styled-components";
+import styled, { keyframes} from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { NavLink } from "react-router-dom";
+
+export const Animation = keyframes`
+    0%{
+        height: 0%;
+        transform: translateY(0px);
+        visibility: unset;
+    }
+    50%{
+        height: 100%;
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(192px);
+        visibility: hidden;
+    }
+    100%{
+        height: 0%;
+        transform: translateY(192px);
+        visibility: hidden;
+    }
+`;
 
 export const Container = styled.section`
     width: 100%;
@@ -16,10 +37,10 @@ export const Container = styled.section`
 `;
 
 export const Content = styled.div`
-    width: 95%;
+    width: 100%;
     display: flex;
     gap: 48px;
-    margin-top: 56px;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
     
@@ -28,6 +49,7 @@ export const Content = styled.div`
         flex-direction: column;
         gap: 4px;
         max-width: 40%;
+        padding-left: 48px;
 
         span{
             font-size: 56px;
@@ -55,11 +77,13 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         gap: 48px;
-        width: 30%;
+        width: calc(33.33vw - 48px);
+        padding-right: 48px;
 
         h2{
             font-size: 18px;
-            font-weight: 300;
+            font-family: "Tobias";
+            font-weight: 400;
             line-height: 1.2em;
             color: ${theme.colors.text};
             margin: 0;
@@ -139,7 +163,7 @@ export const ScrollIndicator = styled.div`
   background-color: ${theme.colors.gray700};
   position: absolute;
   bottom: 128px;
-  left: 16px;
+  left: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,5 +174,15 @@ export const ScrollIndicator = styled.div`
     width: 100%;
     height: 0%;
     transition: all 0.5s linear;
+  }
+
+  &:before{
+    content: '';
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 0%;
+    background-color: ${theme.colors.primary};
+    animation: ${Animation} 2s infinite linear;
   }
 `;

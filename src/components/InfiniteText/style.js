@@ -29,6 +29,7 @@ export const Container = styled.section`
                 font-weight: 400;
                 width: fit-content;
                 min-width: fit-content;
+                font-family: "Tobias";
             }
 
             img{
