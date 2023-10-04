@@ -36,14 +36,17 @@ function Section2() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 1,
-            duration: 1.2,
-            stagger: 0.03,
+            delay: 0.2,
+            duration: 3,
+            stagger: {
+                amount: 0.5
+            },
             scrollTrigger: {
                 trigger: title1.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 4,
+                scrub: false,
+                toggleActions: "restart none none none"
             }
         })
 
@@ -54,14 +57,17 @@ function Section2() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 1,
-            duration: 1.2,
-            stagger: 0.03,
+            delay: 0.2,
+            duration: 3,
+            stagger: {
+                amount: 0.5
+            },
             scrollTrigger: {
                 trigger: title2.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 4,
+                scrub: false,
+                toggleActions: "restart none none none"
             }
         })
 
@@ -72,14 +78,17 @@ function Section2() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 1,
-            duration: 1.2,
-            stagger: 0.01,
+            delay: 0.2,
+            duration: 2,
+            stagger: {
+                amount: 0.5
+            },
             scrollTrigger: {
                 trigger: title3.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 4,
+                scrub: false,
+                toggleActions: "restart none none none"
             }
         })
     }
@@ -89,19 +98,19 @@ function Section2() {
     }, {
         y: 0,
         opacity: 1,
-        ease: Power0.easeNone,
-        delay: 1,
-        duration: 12,
+        ease: Expo.easeOut,
+        delay: 0.2,
+        duration: 2,
         stagger: {
-            amount: 12,
+            amount: 1.2,
             from: "end",
-            each: 6
         },
         scrollTrigger: {
             trigger: line22.current,
             start: "top 75%",
             end: "top 75%",
-            scrub: 4,
+            scrub: false,
+            toggleActions: "restart none none none"
         }
     })
 
