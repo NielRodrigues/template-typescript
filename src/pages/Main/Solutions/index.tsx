@@ -33,7 +33,7 @@ function Solutions() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 3,
-            duration: 3,
+            duration: 30,
             stagger: {
                 amount: 0.5,
             },
@@ -53,7 +53,7 @@ function Solutions() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 1,
-            duration: 3,
+            duration: 30,
             stagger: {
                 amount: 0.5,
             },
