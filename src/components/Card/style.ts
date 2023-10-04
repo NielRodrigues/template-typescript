@@ -16,6 +16,7 @@ export const Container = styled.div`
     svg.icon{
         height: 56px;
         width: 56px;
+        margin-bottom: 40px;
         path {
             fill: ${theme.colors.white};
         }

@@ -59,7 +59,7 @@ export const Div2 = styled.div`
 
 export const Scroll = styled.div`
     width: auto;
-    height: 417px;
+    height: 480px;
 `;
 
 export const Panel = styled.div`

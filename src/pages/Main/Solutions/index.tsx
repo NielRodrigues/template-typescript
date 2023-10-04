@@ -33,13 +33,15 @@ function Solutions() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 0.4,
-            duration: 0.4,
-            stagger: 0.01,
+            duration: 50,
+            stagger: {
+                amount: 2,
+            },
             scrollTrigger: {
-                trigger: titleRef.current,
+                trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 4,
+                scrub: 8,
             }
         })
 
@@ -51,13 +53,16 @@ function Solutions() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 1,
-            duration: 1.2,
-            stagger: 0.03,
+            duration: 50,
+            stagger: {
+                amount: 2,
+            },
             scrollTrigger: {
-                trigger: titleRef.current,
+                trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 4,
+                scrub: 8,
+                markers: true,
             }
         })
 
@@ -69,13 +74,15 @@ function Solutions() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 1,
-            duration: 0.8,
-            stagger: 0.01,
+            duration: 50,
+            stagger: {
+                amount: 2,
+            },
             scrollTrigger: {
-                trigger: titleRef.current,
+                trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 4,
+                scrub: 8,
             }
         })
     }
