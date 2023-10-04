@@ -29,9 +29,9 @@ function Home() {
             ease: Expo.easeOut,
             delay: 3,
             duration: 1,
-            stagger: {
-                amount: 2,
-            }
+            // stagger: {
+            //     amount: 2,
+            // }
         })
     }
   }, [])
