@@ -53,15 +53,15 @@ function Solutions() {
             opacity: 1,
             ease: Expo.easeOut,
             delay: 1,
-            duration: 50,
+            duration: 3,
             stagger: {
-                amount: 2,
+                amount: 0.5,
             },
             scrollTrigger: {
                 trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 8,
+                scrub: 1,
                 markers: true,
             }
         })
