@@ -21,11 +21,11 @@ export const Container = styled.section`
         justify-content: center;
 
         span{
-            font-size: 24px;
+            font-size: 32px;
             color: ${theme.colors.white};
             font-weight: 400;
             text-align: center;
-            margin-right: 8px;
+            margin-right: 12px;
 
         }
     }
