@@ -41,7 +41,7 @@ function Solutions() {
                 trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 1,
+                scrub: 10,
             }
         })
 
