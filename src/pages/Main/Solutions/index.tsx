@@ -32,8 +32,8 @@ function Solutions() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 3,
-            duration: 30,
+            delay: 0.2,
+            duration: 3,
             stagger: {
                 amount: 0.5,
             },
@@ -41,7 +41,8 @@ function Solutions() {
                 trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 10,
+                scrub: false,
+                toggleActions: "restart none none none"
             }
         })
 
@@ -52,8 +53,8 @@ function Solutions() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 1,
-            duration: 30,
+            delay: 0.2,
+            duration: 3,
             stagger: {
                 amount: 0.5,
             },
@@ -61,8 +62,8 @@ function Solutions() {
                 trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 10,
-                markers: true,
+                scrub: false,
+                toggleActions: "restart none none none"
             }
         })
 
@@ -73,16 +74,17 @@ function Solutions() {
             y: 0,
             opacity: 1,
             ease: Expo.easeOut,
-            delay: 1,
-            duration: 50,
+            delay: 0.2,
+            duration: 2,
             stagger: {
-                amount: 2,
+                amount: 0.5,
             },
             scrollTrigger: {
                 trigger: section.current,
                 start: "top 80%",
                 end: "top 80%",
-                scrub: 8,
+                scrub: false,
+                toggleActions: "restart none none none"
             }
         })
     }
