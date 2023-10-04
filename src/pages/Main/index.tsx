@@ -1,4 +1,4 @@
-import { Container } from './styles'
+import { Container, Div } from './styles'
 import { useState } from 'react';
 import logo from "../../assets/images/logo.png"
 import "animate.css"
@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import Home from './Home';
 import Solutions from './Solutions';
 import InfiniteText from '../../components/InfiniteText';
+import Section2 from './Section2';
 
 export default function Main() {
 
@@ -20,6 +21,8 @@ export default function Main() {
       <Home />
       <Solutions />
       <InfiniteText />
+      <Section2 />
+      <Div />
     </Container>
   )
 }

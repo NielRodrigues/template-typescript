@@ -13,8 +13,6 @@ function Home() {
   const sloganRef2 = useRef(null)
   const sloganRef3 = useRef(null)
 
-  const [percetage, setPercetage] = useState<number>(0)
-
 
   useEffect(() => {
     if(sloganRef.current && sloganRef2.current && sloganRef3.current) {
@@ -35,25 +33,11 @@ function Home() {
         })
     }
   }, [])
-
-  useEffect(() => {
-    const maxHeight = document.body.scrollHeight - window.innerHeight
-    const handleIndicator = () => {
-        setPercetage((window.scrollY / maxHeight) * 100)
-    }
-
-    window.addEventListener("scroll", handleIndicator)
-
-    return () => window.removeEventListener("scroll", handleIndicator)
-  }, [])
-
   
 
   return (
     <Container>
-        <ScrollIndicator>
-            <div style={{ height: `${percetage}%`}} className="active" />
-        </ScrollIndicator>
+        <ScrollIndicator />
         <Content>
             <div className="slogan">
                 <h1 ref={sloganRef}>O Maior centro</h1>

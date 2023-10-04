@@ -4,22 +4,10 @@ import { NavLink } from "react-router-dom";
 
 export const Animation = keyframes`
     0%{
-        height: 0%;
-        transform: translateY(0px);
-        visibility: unset;
-    }
-    50%{
-        height: 100%;
-        transform: translateY(0px);
-    }
-    75%{
-        transform: translateY(192px);
-        visibility: hidden;
+        transform: translateY(-192px);
     }
     100%{
-        height: 0%;
-        transform: translateY(192px);
-        visibility: hidden;
+        transform: translateY(512px);
     }
 `;
 
@@ -162,26 +150,19 @@ export const ScrollIndicator = styled.div`
   height: 192px;
   background-color: ${theme.colors.gray700};
   position: absolute;
-  bottom: 128px;
-  left: 48px;
+  bottom: 0px;
+  left: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-
-  div.active{
-    background-color: ${theme.colors.primary};
-    width: 100%;
-    height: 0%;
-    transition: all 0.5s linear;
-  }
 
   &:before{
     content: '';
     width: 100%;
     top: 0;
     left: 0;
-    height: 0%;
+    height: 100%;
     background-color: ${theme.colors.primary};
     animation: ${Animation} 2s infinite linear;
   }

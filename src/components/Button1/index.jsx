@@ -66,7 +66,7 @@ function Button1({ text, link }) {
     >
         <span ref={spanRef} className='content-span'>    
         {
-            hover ? array.map((letter, index)=> <span className='letter' key={index} style={{animationDelay:  `${index * 50}ms`}}>{text[index] === " " ? " " : text[index]}</span>) : text
+            hover ? array.map((letter, index)=> <span className='letter' key={index} style={{animationDelay:  `${index * 20}ms`}}>{text[index] === " " ? " " : text[index]}</span>) : text
         }
         </span>
         <div ref={ballRef} className="icon">
