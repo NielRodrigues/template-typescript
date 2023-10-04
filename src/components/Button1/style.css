@@ -38,7 +38,7 @@ span.letter{
     transition: all .4s cubic-bezier(0.75, 0, 0.25, 1);
     background-color: #2950ff;
     position: absolute;
-    bottom: -8px;
+    bottom: -20px;
     left: 0;
 }
 
@@ -49,7 +49,7 @@ span.letter{
 .button:hover span.content-span:before{
     content: '';
     height: 2px;
-    width: calc(100% + 52px);
+    width: calc(100% + 64px);
     transition: all .4s cubic-bezier(0.75, 0, 0.25, 1);
     background-color: #2950ff;
     position: absolute;

@@ -105,44 +105,6 @@ function Section2() {
         }
     })
 
-    // gsap.fromTo(col3.current, {
-    //     y: "100%",
-    //     delay: 2,
-    //     duration: 2,
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    //     ease: Power0.easeNone,
-    //     delay: 2,
-    //     duration: 2,
-    //     stagger: 3,
-    //     scrollTrigger: {
-    //         trigger: line22.current,
-    //         start: "top 62.5%",
-    //         end: "top 62.5%",
-    //         scrub: 1,
-    //     }
-    // })
-
-    // gsap.fromTo(col1.current, {
-    //     y: "100%",
-    //     delay: 8,
-    //     duration: 8,
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    //     ease: Power0.easeNone,
-    //     delay: 8,
-    //     duration: 8,
-    //     stagger: 3,
-    //     scrollTrigger: {
-    //         trigger: line22.current,
-    //         start: "25% center",
-    //         end: "25% center",
-    //         scrub: 1,
-    //     }
-    // })
-
     
   }, [])
 
