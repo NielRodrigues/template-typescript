@@ -79,7 +79,7 @@ div.icon{
     animation: borderPulse 1500ms infinite ease-out;
 }
 
-div.icon svg {
+div.icon svg.icon-arrow-2 {
     width: 28px;
     height: 28px;
     transform: rotate(-45deg);

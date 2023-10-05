@@ -25,8 +25,6 @@ function Button3({ text, link }) {
         setClick(true)
         setHover(true)
         const { clientX, clientY } = event;
-        const { top, left } = arrowRef.current.getBoundingClientRect();
-        const ball = ballRef.current.getBoundingClientRect();
 
         const span = spanRef.current.getBoundingClientRect();
         
@@ -70,7 +68,7 @@ function Button3({ text, link }) {
         }
         </span>
         <div ref={ballRef} className="icon">
-            <Arrow ref={arrowRef} />
+            <Arrow className='icon-arrow-2' ref={arrowRef} />
         </div>
     </motion.a>
   )
