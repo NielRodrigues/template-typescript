@@ -36,7 +36,7 @@ function Footer() {
                 start: "top 80%",
                 end: "top 80%",
                 scrub: false,
-                toggleActions: "restart none none none"
+                toggleActions: "restart none none reverse"
             }
         })
     }
@@ -55,7 +55,7 @@ function Footer() {
           start: "bottom center",
           end: "bottom center",
           scrub: false,
-          toggleActions: "restart none none none"
+          toggleActions: "restart none none reverse"
       }
   })
   }, [])
