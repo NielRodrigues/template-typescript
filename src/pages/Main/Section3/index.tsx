@@ -103,7 +103,7 @@ function Section3() {
             ease: Expo.easeOut,
             delay: 0.2,
             duration: 3,
-            sstagger: {
+            stagger: {
                 amount: 0.5,
                 each: 1,
             },
@@ -125,9 +125,8 @@ function Section3() {
             ease: Expo.easeOut,
             delay: 0.2,
             duration: 3,
-            sstagger: {
+            stagger: {
                 amount: 0.5,
-                each: 1,
             },
             scrollTrigger: {
                 trigger: text5.current,

@@ -10,6 +10,7 @@ import Solutions from './Solutions';
 import InfiniteText from '../../components/InfiniteText';
 import Section2 from './Section2';
 import Section3 from './Section3';
+import Timeline from './Timeline';
 
 export default function Main() {
 
@@ -24,6 +25,8 @@ export default function Main() {
       <InfiniteText />
       <Section2 />
       <Section3 />
+      <Timeline />
+      <InfiniteText />
       <Div />
     </Container>
   )

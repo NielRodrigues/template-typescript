@@ -84,7 +84,7 @@ function Solutions() {
                 start: "top 80%",
                 end: "top 80%",
                 scrub: false,
-                toggleActions: "restart none none none"
+                toggleActions: "restart none none none",
             }
         })
     }
