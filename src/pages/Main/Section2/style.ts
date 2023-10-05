@@ -5,21 +5,39 @@ export const Container = styled.div`
     width: 100%;
     min-height: 100vh;
     height: 100vh;
-    background-color: teal;
     display: flex;
-    margin: 80px 0;
 `;
 
 export const Col = styled.div`
-    width: calc(33.33vw - 96px);
-    min-width: calc(33.33vw - 96px);
+    width: calc(33.33vw - 120px);
+    min-width: calc(33.33vw - 120px);
     height: calc(100vh - 96px);
     min-height: calc(100% - 96px);
-    background-color: #FFFFFF;
+    background-color: #1A1A1A;
     padding: 48px;
+    padding-right: 72px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    gap: 32px;
+    overflow: hidden;
+
+    h1{
+        font-size: 28px;
+        color: ${theme.colors.text};
+        font-weight: 400;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+    svg.logo{
+        width: 100%;
+        height: auto;
+
+        path{
+            fill: ${theme.colors.white};
+        }
+    }
 `;
 
 export const Col2 = styled.div`

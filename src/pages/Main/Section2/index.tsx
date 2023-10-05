@@ -4,8 +4,14 @@ import { Col, Col2, Container, Line1, Line2 } from './style'
 import gsap, { Expo, Power0 } from 'gsap'
 import { ScrollTrigger } from "gsap/all";
 import SplitType from 'split-type'
+import Button1 from '../../../components/Button1';
+
+import { ReactComponent as Logo } from "../../../assets/images/logo.svg"
 
 function Section2() {
+
+  const title1col1 = useRef(null)
+  const logo = useRef(null)
 
   const title1 = useRef(null)
   const title2 = useRef(null)
@@ -24,10 +30,11 @@ function Section2() {
   gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-    if(title1.current && title2.current && title3.current){
+    if(title1.current && title2.current && title3.current && title1col1.current){
         SplitType.create(title1.current, { types: "words, chars", charClass: "char-counter" })
         SplitType.create(title2.current, { types: "words, chars", wordClass: "words3" })
         SplitType.create(title3.current, { types: "words, chars", wordClass: "words4" })
+        SplitType.create(title1col1.current, { types: "words, chars", wordClass: "words5" })
 
         gsap.fromTo(".char-counter", {
             y: 64,
@@ -91,6 +98,27 @@ function Section2() {
                 toggleActions: "restart none none reverse"
             }
         })
+
+        gsap.fromTo(".words5", {
+            y: 64,
+            opacity: 0,
+        }, {
+            y: 0,
+            opacity: 1,
+            ease: Expo.easeOut,
+            delay: 0.2,
+            duration: 2,
+            stagger: {
+                amount: 0.5
+            },
+            scrollTrigger: {
+                trigger: title1col1.current,
+                start: "top 80%",
+                end: "top 80%",
+                scrub: false,
+                toggleActions: "restart none none reverse"
+            }
+        })
     }
 
     gsap.fromTo(".col", {
@@ -114,13 +142,33 @@ function Section2() {
         }
     })
 
+    gsap.fromTo(logo.current, {
+        y: "100%",
+        opacity: 0,
+    }, {
+        y: 0,
+        opacity: 1,
+        duration: 3,
+        delay: 0.2,
+        ease: Expo.easeOut,
+        scrollTrigger: {
+            trigger: line22.current,
+            start: "top 75%",
+            end: "top 75%",
+            scrub: false,
+            toggleActions: "restart none none reverse"
+        }
+    })
+
     
   }, [])
 
   return (
     <Container>
         <Col>
-
+            <h1 ref={title1col1}>Uma marca que revela as correntes do empresário, ensina o caminho para quebra-las e incentiva os novos passos.</h1>
+            <Button1 text='Saiba mais' link='/' />
+            <Logo className='logo' ref={logo} />
         </Col>
 
         <Col2>

@@ -5,9 +5,10 @@ export const Container = styled.section`
     width: auto;
     min-width: fit-content;
     height: 200vh;
-    min-height: 2000px;
+    min-height: 2480px;
     display: flex;
     margin: 80px 0;
+    margin-bottom: 0;
     border-radius: 24px;
 `;
 

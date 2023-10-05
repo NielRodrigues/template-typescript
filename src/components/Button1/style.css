@@ -3,6 +3,7 @@
     align-items: center;
     gap: 24px;
     text-decoration: none;
+    width: fit-content;
 }
 
 .button span.content-span {

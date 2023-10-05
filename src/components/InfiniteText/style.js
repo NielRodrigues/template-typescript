@@ -4,7 +4,7 @@ import { theme } from "../../styles/Theme";
 export const Container = styled.section`
     width: 100vw;
     height: 20vh;
-    margin: 80px 0;
+    margin: 128px 0;
     display: flex;
     align-items: center;
     overflow: hidden;

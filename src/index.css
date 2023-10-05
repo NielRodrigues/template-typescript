@@ -65,3 +65,7 @@ body::-webkit-scrollbar-thumb {
 input, select, textarea, option, button { font-family: 'Robert'; }
 
 h1, h2, h3, h4, h5, h6, p, span div { font-family: 'Robert'; }
+
+.word, .words2, .words3, .words4, .words5 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

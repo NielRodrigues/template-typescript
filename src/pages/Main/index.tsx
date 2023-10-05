@@ -9,6 +9,7 @@ import Home from './Home';
 import Solutions from './Solutions';
 import InfiniteText from '../../components/InfiniteText';
 import Section2 from './Section2';
+import Section3 from './Section3';
 
 export default function Main() {
 
@@ -22,6 +23,7 @@ export default function Main() {
       <Solutions />
       <InfiniteText />
       <Section2 />
+      <Section3 />
       <Div />
     </Container>
   )

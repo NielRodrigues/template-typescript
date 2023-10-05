@@ -159,7 +159,7 @@ function Solutions() {
             scrollTrigger: {
                 trigger: section.current,
                 start: "top 20%",
-                end: `1583 20%`,
+                end: `2000 20%`,
                 scrub: 4,
                 pin: true,
             }
