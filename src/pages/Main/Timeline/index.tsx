@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Container, Scroll } from './style'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import { Button, Container, Scroll } from './style'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/all";
+import { MouseContext } from '../../../contexts/MouseHoverContext';
 
 function Timeline() {
 
@@ -12,6 +13,8 @@ function Timeline() {
 
   const [percentage, setPercentage] = useState<number>(0)
 
+  const { setClick } = useContext(MouseContext)
+
   useEffect(() => {
     const panel = gsap.context(() => {
         gsap.to(scrollRef.current, {
@@ -19,13 +22,11 @@ function Timeline() {
             ease: "none",
             scrollTrigger: {
                 trigger: scrollRef.current,
-                start: "top center",
-                end: "2000 center",
-                scrub: 4, 
-                markers: true,
+                start: "top 128",
+                end: "2000 128",
+                scrub: 4,
                 pin: true,
                 onUpdate: (animation) => {
-                    // Acesse a posição atual de "x" no elemento animado
                     const currentX: number = animation.progress * 100; // O valor da propriedade "x" é multiplicado por 100 para obter um valor percentual
                     console.log("Posição atual de x:", currentX);
                     setPercentage(currentX)
@@ -40,12 +41,26 @@ function Timeline() {
   return (
     <Container ref={container}>
         <Scroll ref={scrollRef}>
+            <div className="title" style={{ left: `calc(${percentage}vw + 96px)`}}>Trilha Empresarial da NWB</div>
+            <span className="text">Operacional</span>
+            <span className="text" style={{left: "12.5%"}}>Tático</span>
+            <span className="text" style={{left: "62.5%"}}>Estratégico</span>
+
             <div className="line" />
             <div className="line-active" style={{ width: `${percentage}%`}} />
             <div className={percentage > 0.2 ? "square active" : "square"} />
-            <div className={percentage > 10.95 ? "ball active" : "ball"} style={{left: "30vw"}} />
-            <div className={percentage > 63.5 ? "ball active" : "ball"} style={{left: "135vw"}} />
+            <div className={percentage > 10.95 ? "ball active" : "ball"} style={{left: "12.5%"}} />
+            <div className={percentage >= 62 ? "ball active" : "ball"} style={{left: "62.5%"}} />
             <div className={percentage >= 100 ? "end active" : "end"} />
+
+            <Button to="/"
+                onMouseEnter={() => setClick(true)}
+                onMouseLeave={() => setClick(false)}
+                style={{ left: `calc(${percentage}vw + 96px)`}}
+            >
+                <span>Conheça os nossos produtos da trilha empresarial</span>
+            </Button>
+
             <div className="text">
                 <h5>Ano 0</h5>
                 <h2>Abertura <br />dos olhos</h2>

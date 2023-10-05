@@ -1,0 +1,90 @@
+.button{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.button span.content-span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: #FFFFFF;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+@keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+span.letter{
+    animation: reveal 500ms ease forwards;
+}
+
+.button span.content-span:before{
+    content: '';
+    height: 1px;
+    width: 0%;
+    transition: all .4s cubic-bezier(0.75, 0, 0.25, 1);
+    background-color: #2950ff;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+
+
+
+
+.button:hover span.content-span:before{
+    content: '';
+    height: 2px;
+    width: calc(100% + 64px);
+    transition: all .4s cubic-bezier(0.75, 0, 0.25, 1);
+    background-color: #2950ff;
+    position: absolute;
+}
+
+@keyframes borderPulse {
+    0% {
+      box-shadow: inset 0px 0px 0px 5px rgb(41, 80, 255, .1), 0px 0px 0px 0px rgb(41, 80, 255, 0.8);
+    }
+    100% {
+      box-shadow: inset 0px 0px 0px 3px rgb(41, 80, 255, .1), 0px 0px 0px 10px rgb(41, 80, 255, 0);
+    }
+}
+  
+
+div.icon{
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2950ff;
+
+    animation: borderPulse 1500ms infinite ease-out;
+}
+
+div.icon svg {
+    width: 28px;
+    height: 28px;
+    transform: rotate(-45deg);
+}
+
+div.icon svg path{
+   fill: #FFFFFF;
+}

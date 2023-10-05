@@ -1,7 +1,5 @@
-import { Container, Div } from './styles'
-import { useState } from 'react';
-import logo from "../../assets/images/logo.png"
 import "animate.css"
+import { Container } from './styles'
 import CursorMask from '../../components/CursorMask';
 import Load from '../../components/Load';
 import Header from '../../components/Header';
@@ -11,6 +9,8 @@ import InfiniteText from '../../components/InfiniteText';
 import Section2 from './Section2';
 import Section3 from './Section3';
 import Timeline from './Timeline';
+import InfiniteText2 from '../../components/InfiniteText2';
+import Footer from '../../components/Footer';
 
 export default function Main() {
 
@@ -26,8 +26,8 @@ export default function Main() {
       <Section2 />
       <Section3 />
       <Timeline />
-      <InfiniteText />
-      <Div />
+      <InfiniteText2 />
+      <Footer />
     </Container>
   )
 }
