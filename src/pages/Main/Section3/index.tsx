@@ -164,10 +164,10 @@ function Section3() {
         delay: 0.2,
         y: 0,
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: Expo.easeOut,
         stagger: {
-            amount: 1.2,
+            amount: 0.6,
             each: 1.2,
             from: "end",
         },
