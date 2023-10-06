@@ -27,6 +27,11 @@ export const Container = styled.section`
             text-align: center;
             margin-right: 12px;
 
+
+            @media (max-width: 1024px) {
+                font-size: 24px;
+            }
+
         }
     }
     svg.logo{
