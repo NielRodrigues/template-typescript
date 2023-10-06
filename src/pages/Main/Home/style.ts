@@ -26,7 +26,6 @@ export const Container = styled.section`
 
 export const Content = styled.div`
     width: 100%;
-    display: flex;
     gap: 48px;
     margin-top: 24px;
     display: flex;
@@ -58,6 +57,22 @@ export const Content = styled.div`
             margin: 0;
             display: inline-block;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        @media (max-width: 1024px) {
+            width: calc(100vw - 64px);
+            padding: 0 32px;
+            max-width: none;
+        }
+
+        @media (max-width: 767px) {
+            width: calc(100vw - 48px);
+            padding: 0 24px;
+            max-width: none;
+
+            h1{
+                font-size: 40px;
+            }
         }
     }
 
@@ -103,6 +118,23 @@ export const Content = styled.div`
                 background-color: ${theme.colors.primary};
             }
         }
+
+        @media (max-width: 1024px) {
+            width: calc(100vw - 64px);
+            padding: 0 32px;
+            max-width: none;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 767px) {
+            width: calc(100vw - 48px);
+            padding: 0 24px;
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
     }
 `;
 
@@ -141,6 +173,32 @@ export const BGTop = styled.div`
     img{
         width: 100%;
         height: auto;
+
+        &.desktop{
+            display: flex;
+        }
+
+        &.tablet{
+            display: none;
+        }
+
+        &.mobile{
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            &.desktop{
+                display: none;
+            }
+
+            &.tablet{
+                display: flex;
+            }
+
+            &.mobile{
+                display: none;
+            }
+        }
     }
 `;
 
@@ -165,5 +223,9 @@ export const ScrollIndicator = styled.div`
     height: 100%;
     background-color: ${theme.colors.primary};
     animation: ${Animation} 2s infinite linear;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;

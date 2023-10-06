@@ -11,6 +11,7 @@ import Section3 from './Section3';
 import Timeline from './Timeline';
 import InfiniteText2 from '../../components/InfiniteText2';
 import Footer from '../../components/Footer';
+import SolutionsMobile from "./SolutionsMobile";
 
 export default function Main() {
 
@@ -22,6 +23,8 @@ export default function Main() {
       <Header />
       <Home />
       <Solutions />
+      <SolutionsMobile />
+      
       <InfiniteText />
       <Section2 />
       <Section3 />

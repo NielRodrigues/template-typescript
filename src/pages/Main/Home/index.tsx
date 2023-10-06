@@ -6,6 +6,7 @@ import gsap, { Expo } from 'gsap'
 
 
 import imageTop from "../../../assets/images/BG-Topo-NWB.png"
+import imageTop2 from "../../../assets/images/img-top-2.png"
 import Button1 from '../../../components/Button1'
 
 function Home() {
@@ -73,9 +74,16 @@ function Home() {
             </div>
         </Content>
         <BGTop>
-            <motion.img src={imageTop} alt="BackgrounD Top" 
+            <motion.img src={imageTop} alt="Background Top Desktop" 
                 animate={{ y: [120, 0], opacity: [0, 1] }}
                 transition={{ ease: [0.06, 0.9, 0.26, 0.99], duration: 1.5, delay: 3.2 }}
+                className='desktop'
+            />
+
+            <motion.img src={imageTop2} alt="Background Top Tablet" 
+                animate={{ y: [120, 0], opacity: [0, 1] }}
+                transition={{ ease: [0.06, 0.9, 0.26, 0.99], duration: 1.5, delay: 3.2 }}
+                className='tablet'
             />
         </BGTop>
     </Container>

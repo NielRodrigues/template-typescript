@@ -17,4 +17,11 @@ export const Container = styled.header`
         }
         
     }
+
+    @media (max-width: 1024px) {
+        padding: 32px;
+    }
+    @media (max-width: 767px) {
+        padding: 24px;
+    }
 `;

@@ -152,7 +152,7 @@ function Section2() {
         delay: 0.2,
         ease: Expo.easeOut,
         scrollTrigger: {
-            trigger: line22.current,
+            trigger: logo.current,
             start: "top 75%",
             end: "top 75%",
             scrub: false,

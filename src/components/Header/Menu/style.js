@@ -60,6 +60,13 @@ export const Navigation = styled.div`
     transition: all .8s cubic-bezier(.8, 0, 0.1, 1);
     overflow: hidden;
 
+    @media (max-width: 1024px) {
+        right: 32px;
+    }
+    @media (max-width: 767px) {
+        right: 24px;
+    }
+
     div.line-header-menu{
         display: flex;
         align-items: flex-end;
