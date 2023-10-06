@@ -91,6 +91,12 @@ export const Line1 = styled.div`
         @media (max-width: 1024px) {
             font-size: 72px;
         }
+
+        @media (max-width: 767px) {
+            font-size: 48px;
+            text-align: center;
+            width: calc(50vw - 24px);
+        }
     }
 
     h4{
@@ -106,12 +112,27 @@ export const Line1 = styled.div`
             width: calc(50vw - 48px);
             max-width: none;
         }
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+            width: calc(50vw - 24px);
+            max-width: none;
+            text-align: center;
+        }
+
+
     }
 
     @media (max-width: 1024px) {
         gap: 32px;
         width: calc(100% - 64px);
         padding: 32px;
+    }
+
+    @media (max-width: 767px) {
+        gap: 32px;
+        width: calc(100% - 48px);
+        padding: 24px;
     }
 `;
 
@@ -127,6 +148,11 @@ export const Line2 = styled.div`
         min-height: 380px;
     }
 
+    @media (max-width: 768px) {
+        height: auto;
+        min-height: 380px;
+    }
+
     div.line-2-1{
         display: flex;
         align-items: center;
@@ -135,6 +161,10 @@ export const Line2 = styled.div`
         min-height: 200px;
         width: 100%;
         overflow: hidden;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
 
         div.col-1-line-2-1{
             width: calc(50% - 96px);
@@ -150,6 +180,13 @@ export const Line2 = styled.div`
                 padding: 32px;
             }
 
+            @media (max-width: 767px) {
+                width: calc(100% - 48px);
+                height: calc(100% - 48px);
+                padding: 24px;
+                text-align: center;
+            }
+
             h3{
                 font-size: 18px;
                 color: ${theme.colors.text};
@@ -157,6 +194,10 @@ export const Line2 = styled.div`
                 font-family: "Tobias";
                 margin: 0;
                 font-weight: 100;
+
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                }
                 
             }
         }
@@ -175,6 +216,15 @@ export const Line2 = styled.div`
                 width: calc(50% - 64px);
                 height: calc(100% - 64px);
                 padding: 32px;
+            }
+
+            @media (max-width: 767px) {
+                width: calc(50% - 48px);
+                height: calc(100% - 48px);
+                min-height: 200px;
+                max-height: 200px;
+                padding: 0 24px;
+                align-self: flex-end;
             }
 
             svg{
@@ -202,6 +252,7 @@ export const Line2 = styled.div`
         justify-content: space-between;
         height: 50%;
         min-height: 200px;
+        max-height: 200px;
         width: 100%;
         overflow: hidden;
 
@@ -219,6 +270,13 @@ export const Line2 = styled.div`
                 width: calc(50% - 64px);
                 height: calc(100% - 64px);
                 padding: 32px;
+            }
+
+            @media (max-width: 767px) {
+                width: calc(50% - 48px);
+                height: calc(100% - 48px);
+                padding: 0 24px;
+                min-height: 200px;
             }
 
             svg{
@@ -253,6 +311,13 @@ export const Line2 = styled.div`
                 width: calc(50% - 64px);
                 height: calc(100% - 64px);
                 padding: 32px;
+            }
+
+            @media (max-width: 767px) {
+                width: calc(50% - 48px);
+                height: calc(100% - 48px);
+                padding: 0 24px;
+                min-height: 200px;
             }
 
             svg{

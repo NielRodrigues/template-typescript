@@ -20,8 +20,10 @@ export const Container = styled.header`
 
     @media (max-width: 1024px) {
         padding: 32px;
+        width: calc(100vw - 64px);
     }
     @media (max-width: 767px) {
         padding: 24px;
+        width: calc(100vw - 48px);
     }
 `;
