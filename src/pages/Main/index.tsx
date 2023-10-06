@@ -12,6 +12,7 @@ import Timeline from './Timeline';
 import InfiniteText2 from '../../components/InfiniteText2';
 import Footer from '../../components/Footer';
 import SolutionsMobile from "./SolutionsMobile";
+import TimelineMobile from "./TimelineMobile";
 
 export default function Main() {
 
@@ -29,6 +30,7 @@ export default function Main() {
       <Section2 />
       <Section3 />
       <Timeline />
+      <TimelineMobile />
       <InfiniteText2 />
       <Footer />
     </Container>

@@ -21,6 +21,17 @@ export const Container = styled.footer`
         path{
             fill: ${theme.colors.white}
         }
+
+    }
+
+    @media (max-width: 1024px) {
+        width: calc(100vw - 64px);
+        padding: 0 32px;
+    }
+
+    @media (max-width: 767px) {
+        width: calc(100vw - 48px);
+        padding: 0 24px;
     }
 `;
 
@@ -29,12 +40,20 @@ export const Line = styled.div`
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+
     h1{
         font-size: 48px;
         font-weight: 400;
         line-height: 1.2em;
         color: ${theme.colors.text};
         margin: 0;
+
+        @media (max-width: 767px) {
+            margin-bottom: 48px;
+        }
     }
 
     div.social-media{

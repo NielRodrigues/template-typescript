@@ -5,10 +5,14 @@ import image from "../../../assets/images/Livro-Andre-Menezes.jpg"
 
 export const Container = styled.section`
     width: 100%;
+    height: fit-content;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     margin-bottom: 80px;
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+        margin-top: 80px;
+    }
 `;
 
 export const AnimationButton = keyframes`
@@ -31,6 +35,13 @@ export const Col = styled.div`
     justify-content: space-between;
     gap: 80px;
     overflow: hidden;
+
+    @media (max-width: 1024px) {
+        width: calc(50vw - 32px);
+        padding-top: 32px;
+        padding-left: 32px;
+        margin-bottom: 32px;
+    }
 
     h3.title{
         font-size: 20px;
@@ -78,6 +89,13 @@ export const Col2 = styled.div`
     gap: 80px;
     overflow: hidden;
 
+    @media (max-width: 1024px) {
+        width: calc(50vw - 64px);
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
     h2{
         font-size: 56px;
         color: ${theme.colors.text};
@@ -116,6 +134,13 @@ export const Col3 = styled.div`
     min-height: 100vh;
     overflow: hidden;
     background-image: url(${image});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1024px) {
+        width: 100vw;
+    }
 
     div.buy-div{
         display: flex;

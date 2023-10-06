@@ -3,13 +3,14 @@ import { theme } from "../../../styles/Theme";
 import { NavLink } from "react-router-dom";
 
 export const Container = styled.section`
-    width: auto;
-    height: 2580px;
-    display: flex;
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    display: none;
     margin: 80px 0;
 
     @media (max-width: 767px) {
-        display: none;
+        display: flex;
     }
 `;
 
@@ -32,12 +33,79 @@ export const Scroll = styled.div`
     border-radius: 24px;
     position: relative;
 
+    .content {
+        display: flex;
+        align-items: center;
+        height: 360px;
+        width: 100%;
+        max-width: 100vw;
+        justify-content: space-between;
+    }
+
+    .slider{
+        height: 100%;
+        width: 380px;
+        min-width: 380px;
+        max-width: 380px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 20px;
+        justify-content: center;
+
+            span.text{
+                font-size: 20px;
+                font-weight: 200;
+                color: ${theme.colors.text};
+                margin: 0;
+                position: absolute;
+                top: 16px;
+                left: 24px;
+            }
+
+            div.line{
+                height: 1px;
+                width: 100%;
+                background-color: ${theme.colors.primary};
+                position: absolute;
+                top: 72px;
+            }
+
+            div.square{
+                height: 16px;
+                width: 16px;
+                background-color: ${theme.colors.primary};
+                position: absolute;
+                top: 64px;
+                left: 24px;
+            }
+
+            div.ball{
+                height: 16px;
+                width: 16px;
+                background-color: ${theme.colors.primary};
+                border-radius: 50%;
+                position: absolute;
+                top: 64px;
+                left: 24px;
+            }
+
+            div.end{
+                height: 28px;
+                width: 1px;
+                background-color: ${theme.colors.primary};
+                position: absolute;
+                top: 58px;
+                right: 24px;
+            }
+    }
+
     div.line{
         height: 1px;
         width: calc(100% - 156px);
         background-color: ${theme.colors.gray100};
         position: absolute;
-        top: 162px;
+        top: 72px;
         left: 48px;
     }
 
@@ -47,7 +115,7 @@ export const Scroll = styled.div`
         color: ${theme.colors.text};
         margin: 0;
         position: absolute;
-        top: 102px;
+        top: 28px;
         left: 48px;
     }
 
@@ -57,7 +125,7 @@ export const Scroll = styled.div`
         max-width: calc(100% - 156px);
         background-color: ${theme.colors.primary};
         position: absolute;
-        top: 162px;
+        top: 72px;
         left: 48px;
         transition: all .4s ease-out;
     }
@@ -67,7 +135,7 @@ export const Scroll = styled.div`
         width: 16px;
         background-color: ${theme.colors.gray100};
         position: absolute;
-        top: 154px;
+        top: 64px;
         left: 48px;
 
         &.active{
@@ -81,7 +149,7 @@ export const Scroll = styled.div`
         border-radius: 50%;
         background-color: ${theme.colors.gray100};
         position: absolute;
-        top: 154px;
+        top: 64px;
         left: 48px;
         
         &.active{
@@ -94,7 +162,7 @@ export const Scroll = styled.div`
         width: 1px;
         background-color: ${theme.colors.gray100};
         position: absolute;
-        top: 148px;
+        top: 58px;
         right: 108px;
 
         &.active{
@@ -108,9 +176,8 @@ export const Scroll = styled.div`
         gap: 16px;
         width: 224px;
         min-width: 224px;
-        height: 50%;
-        margin: 0 10vw;
-        margin-top: 128px;
+        height: 60%;
+        margin-top: 88px;
 
         h5{
             font-size: 14px;
@@ -136,9 +203,9 @@ export const Scroll = styled.div`
 
     div.title{
         position: absolute;
-        left: 96px;
+        left: 24px;
         top: 0;
-        font-size: 48px;
+        font-size: 40px;
         font-weight: 400;
         color: ${theme.colors.text};
         margin: 0; 
@@ -159,13 +226,37 @@ export const Button = styled(NavLink)`
     animation: ${AnimationButton} 1500ms infinite ease-out;
     position: absolute;
     bottom: 0;
-    left: 96px;
+    left: 24px;
     transition: all .4s ease-out;
 
     span{
         font-size: 16px;
         font-weight: 400;
         color: ${theme.colors.text};
+    }
+`;
+
+export const Content = styled.div`
+    height: auto;
+    display: none;
+    align-items: center;
+    width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+
+    &::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+    background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: ${theme.colors.gray900};
+    background-color: transparent;
     }
 `;
 
