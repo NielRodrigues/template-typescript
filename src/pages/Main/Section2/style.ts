@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import image from "../../../assets/images/img-2.jpg"
 
 export const Container = styled.div`
     width: 100%;
@@ -21,6 +22,7 @@ export const Col = styled.div`
     justify-content: flex-end;
     gap: 32px;
     overflow: hidden;
+    background-image: url(${image});
 
     h1{
         font-size: 28px;

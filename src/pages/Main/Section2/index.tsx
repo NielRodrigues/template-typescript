@@ -122,7 +122,7 @@ function Section2() {
     }
 
     gsap.fromTo(".col", {
-        y: "100%",
+        y: "102%",
     }, {
         y: 0,
         opacity: 1,
@@ -135,8 +135,8 @@ function Section2() {
         },
         scrollTrigger: {
             trigger: line22.current,
-            start: "top 75%",
-            end: "top 75%",
+            start: "-100% 75%",
+            end: "-100% 75%",
             scrub: false,
             toggleActions: "restart none none reverse"
         }

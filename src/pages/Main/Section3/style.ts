@@ -1,12 +1,14 @@
 import styled, { keyframes } from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { NavLink } from "react-router-dom";
+import image from "../../../assets/images/Livro-Andre-Menezes.jpg"
 
 export const Container = styled.section`
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    margin-bottom: 80px;
 `;
 
 export const AnimationButton = keyframes`
@@ -113,6 +115,7 @@ export const Col3 = styled.div`
     justify-content: flex-end;
     min-height: 100vh;
     overflow: hidden;
+    background-image: url(${image});
 
     div.buy-div{
         display: flex;

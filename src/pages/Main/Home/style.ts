@@ -147,7 +147,7 @@ export const BGTop = styled.div`
 export const ScrollIndicator = styled.div`
   width: 2px;
   border-radius: 2px;
-  height: 192px;
+  height: 152px;
   background-color: ${theme.colors.gray700};
   position: absolute;
   bottom: 0px;

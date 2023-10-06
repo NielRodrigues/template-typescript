@@ -129,7 +129,7 @@ function Section3() {
                 amount: 0.5,
             },
             scrollTrigger: {
-                trigger: text5.current,
+                trigger: text4.current,
                 start: "top 75%",
                 end: "top 75%",
                 scrub: false,
@@ -172,10 +172,10 @@ function Section3() {
         },
         scrollTrigger: {
             trigger: div2.current,
-            start: "-100% 75%",
-            end: "-100% 75%",
+            start: "-200% 75%",
+            end: "-200% 75%",
             scrub: false,
-            toggleActions: "restart none none reverse"
+            toggleActions: "restart none none reverse",
         }, 
     })
   }, [])
