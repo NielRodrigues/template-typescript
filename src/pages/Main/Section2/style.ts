@@ -252,7 +252,6 @@ export const Line2 = styled.div`
         justify-content: space-between;
         height: 50%;
         min-height: 200px;
-        max-height: 200px;
         width: 100%;
         overflow: hidden;
 

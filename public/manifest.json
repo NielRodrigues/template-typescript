@@ -1,6 +1,6 @@
 {
-  "short_name": "Aplicação React",
-  "name": "Templade INVISION™ | React",
+  "short_name": "NWB",
+  "name": "NWB COMPANY",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0F0A0B",
-  "background_color": "#F8F6FA"
+  "theme_color": "#FFFFFF",
+  "background_color": "#000000"
 }

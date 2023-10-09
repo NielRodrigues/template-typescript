@@ -18,7 +18,7 @@ function Timeline() {
   useEffect(() => {
     const panel = gsap.context(() => {
         gsap.to(scrollRef.current, {
-            x: "-50%",
+            x: "-53%",
             ease: "none",
             scrollTrigger: {
                 trigger: scrollRef.current,
@@ -41,7 +41,7 @@ function Timeline() {
   return (
     <Container ref={container}>
         <Scroll ref={scrollRef}>
-            <div className="title" style={{ left: `calc(${percentage}vw + 96px)`}}>Trilha Empresarial da NWB</div>
+            <div className="title" style={{ left: `96px)`}}>Trilha Empresarial da NWB</div>
             <span className="text">Operacional</span>
             <span className="text" style={{left: "12.5%"}}>Tático</span>
             <span className="text" style={{left: "62.5%"}}>Estratégico</span>
