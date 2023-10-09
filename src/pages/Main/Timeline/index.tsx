@@ -27,8 +27,7 @@ function Timeline() {
                 scrub: 4,
                 pin: true,
                 onUpdate: (animation) => {
-                    const currentX: number = animation.progress * 100; // O valor da propriedade "x" é multiplicado por 100 para obter um valor percentual
-                    console.log("Posição atual de x:", currentX);
+                    const currentX: number = animation.progress * 100; 
                     setPercentage(currentX)
                 },
             },
@@ -56,7 +55,7 @@ function Timeline() {
             <Button to="/"
                 onMouseEnter={() => setClick(true)}
                 onMouseLeave={() => setClick(false)}
-                style={{ left: `calc(${percentage}vw + 96px)`}}
+                style={{ left: `96px)`}}
             >
                 <span>Conheça os nossos produtos da trilha empresarial</span>
             </Button>
